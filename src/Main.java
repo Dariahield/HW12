@@ -21,13 +21,11 @@ public class Main {
         Author author1 = new Author( "Лев", " Толстой");
         Book book1 = new Book(" Война и мир", author1,1867);
 
-
         System.out.printf("%s автор %s %s, %d%n" ,
                 book1.getBookName(),
                 book1.getAuthor().getFirstName(),
                 book1.getAuthor().getLastName(),
                 book1.getBookAge());
-
 
 
     }
