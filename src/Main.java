@@ -1,26 +1,34 @@
 public class Main {
-    public static void start() {
 
-    }
     public static void main(String[] args) {
-        Book book = new Book(" Преступление и наказание", " Федор Достоевский ",1866);
-
-        System.out.println("book.bookName = " + book.getBookName());
-        System.out.println("author.nameAuthor = " + book.getNameAuthor());
-        System.out.println("book.bookAge = " + book.getBookAge());
-        book.setBookAge(1865);
-        System.out.println("book.setBookAge = " + book.getBookAge());
+        Author author = new Author("Федор", "Достоевский");
+        Book book = new Book(" Преступление и наказание", author,1866);
 
 
-        Book book1 = new Book( " Война и мир", " Лев Толстой", 1867);
+        System.out.printf("%s автор %s %s, %d%n" ,
+                 book.getBookName(),
+                 book.getAuthor().getFirstName(),
+                 book.getAuthor().getLastName(),
+                 book.getBookAge());
+      book.setBookAge(1865);
 
+        System.out.printf("%s автор %s %s, %d%n" ,
+                book.getBookName(),
+                book.getAuthor().getFirstName(),
+                book.getAuthor().getLastName(),
+                book.getBookAge());
 
-        System.out.println("book1.bookName = " + book1.getBookName());
-        System.out.println("author1.nameAuthor = " + book1.getNameAuthor());
-        System.out.println("book1.bookAge = " + book1.getBookAge());
+        Author author1 = new Author( "Лев", " Толстой");
+        Book book1 = new Book(" Война и мир", author1,1867);
 
+        System.out.printf("%s автор %s %s, %d%n" ,
+                book1.getBookName(),
+                book1.getAuthor().getFirstName(),
+                book1.getAuthor().getLastName(),
+                book1.getBookAge());
 
 
 
     }
+
 }
